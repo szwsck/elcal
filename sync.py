@@ -19,12 +19,6 @@ COURSE_TYPE_NAMES = {
     'tutorial': 'Ćwiczenia',
     'laboratory': 'Laboratorium',
 }
-COURSE_TYPE_COLORS = {
-    'lecture': '12',
-    'project': '15',
-    'tutorial': '2',
-    'laboratory': '6',
-}
 
 creds = Credentials.from_authorized_user_file('token.json', SCOPES)
 if creds.expired:
@@ -103,9 +97,6 @@ def list_calendars():
 def create_calendar(course):
     print(f"Creating calendar for {create_title(course)}")
     calendar = service.calendars().insert(body=create_calendar_body(course)).execute()
-    service.calendarList().patch(calendarId=calendar['id'], body={
-        'colorId': COURSE_TYPE_COLORS[course['type']]
-    }).execute()
     service.acl().insert(calendarId=calendar['id'], body=ACL_RULE_PUBLIC).execute()
     service.events().insert(calendarId=calendar['id'], body=create_event_body(course)).execute()
     return calendar
@@ -121,9 +112,6 @@ def update_calendar(calendar, course):
 
     calendar_body = {'summary': create_title(course), 'description': json.dumps(course)}
     service.calendars().update(calendarId=calendar['id'], body=calendar_body).execute()
-    service.calendarList().patch(calendarId=calendar['id'], body={
-        'colorId': COURSE_TYPE_COLORS[course['type']]
-    }).execute()
     event = service.events().list(calendarId=calendar['id']).execute()['items'][0]
     service.events().update(calendarId=calendar['id'], eventId=event['id'], body=create_event_body(course)).execute()
 
@@ -146,8 +134,7 @@ def main():
     for calendar in calendars:
         existing_course = next(filter(lambda course: course['id'] == get_course(calendar)['id'], courses), None)
         if not existing_course:
-            print(f"Calendar no longer needed, deleting: {get_course(calendar)['name']}")
-            delete_calendar(calendar)
+            print(f"[warn] Calendar no longer needed {get_course(calendar)['name']}")
 
     for calendar in list_calendars():
         print(f"{create_title(get_course(calendar))}: {create_link(calendar)}")
