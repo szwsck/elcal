@@ -1,6 +1,6 @@
 {
   "name": "22Z",
-  "plan": [
+  "schedule": [
     [
       "2022-10-03", "2022-10-10", "2022-10-17", "2022-10-24", "2022-11-07", "2022-11-14", "2022-11-21", "2022-11-28",
       "2022-12-05", "2022-12-12", "2022-12-19", "2023-01-02", "2023-01-09", "2023-01-16", "2023-01-23"
@@ -20,12 +20,139 @@
   ],
   "courses": [
     {
-      "id": "test123",
+      "id": "tkom-lec",
       "name": "TKOM",
-      "start_time": "8:15",
+      "type": "lecture",
+      "location": "017B, EiTI",
+      "start_time": "08:15",
       "end_time": "11:00",
+      "instructor": "Piotr Gawkowski",
+      "weekday": 0,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "pis-lec",
+      "name": "PIS",
+      "type": "lecture",
+      "location": "017B, EiTI",
+      "start_time": "18:15",
+      "end_time": "20:00",
+      "instructor": "Jakub Koperwąs",
+      "weekday": 0,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "wus-lab",
+      "name": "WUS",
+      "type": "laboratory",
+      "location": "09, EiTI",
+      "start_time": "18:15",
+      "end_time": "20:00",
+      "instructor": "Szymon Kijas, Andrzej Ratkowski",
+      "group": "101",
+      "weekday": 0,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "poda-tut-101",
+      "name": "PODA",
+      "type": "tutorial",
+      "location": "026, EiTI",
+      "start_time": "16:15",
+      "end_time": "19:00",
+      "instructor": "Michał Falkowski",
+      "group": "101",
       "weekday": 1,
-      "weeks": [1, 3, 6, 10]
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "sp-lab-101",
+      "name": "SP",
+      "type": "laboratory",
+      "location": "032, EiTI",
+      "start_time": "10:15",
+      "end_time": "14:00",
+      "instructor": "Jerzy Gustowski, Sebastian Plamowski",
+      "group": "101",
+      "weekday": 1,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "poda-lec",
+      "name": "PODA",
+      "type": "lecture",
+      "location": "108, EiTI",
+      "start_time": "14:15",
+      "end_time": "16:00",
+      "instructor": "Piotr Marusak",
+      "weekday": 3,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "psi-lec",
+      "name": "PSI",
+      "type": "lecture",
+      "location": "105-AR, EiTI",
+      "start_time": "08:15",
+      "end_time": "10:00",
+      "instructor": "Grzegorz Blinowski",
+      "weekday": 3,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "psi-lab-101",
+      "name": "PSI",
+      "type": "laboratory",
+      "location": "011, EiTI",
+      "start_time": "10:15",
+      "end_time": "12:00",
+      "instructor": "Grzegorz Blinowski",
+      "group": "101",
+      "weekday": 3,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "sp-lec",
+      "name": "SP",
+      "type": "lecture",
+      "location": "017B, EiTI",
+      "start_time": "16:15",
+      "end_time": "18:00",
+      "instructor": "Jerzy Gustowski",
+      "weekday": 3,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "zpi-lec",
+      "name": "ZPI",
+      "type": "lecture",
+      "location": "04B, EiTI",
+      "start_time": "16:15",
+      "end_time": "18:00",
+      "instructor": "Krzysztof Pieńkosz",
+      "weekday": 3,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "pzsp2-lec",
+      "name": "PZSP2",
+      "type": "lecture",
+      "location": "133, EiTI",
+      "start_time": "12:15",
+      "end_time": "14:00",
+      "instructor": "Robert Nowak, Marcin Szlenk, Andrzej Zalewski, Izabela Żółtowska",
+      "weekday": 4,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    }, {
+      "id": "pzsp2-tut-102",
+      "name": "PZSP2",
+      "type": "tutorial",
+      "location": "P113, EiTI",
+      "start_time": "12:15",
+      "end_time": "14:00",
+      "group": "todo",
+      "weekday": 0,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }, {
+      "id": "wus-lec",
+      "name": "WUS",
+      "type": "lecture",
+      "location": "04B, EiTI",
+      "start_time": "14:15",
+      "end_time": "16:00",
+      "instructor": "Klara Borowa, Szymon Kijas, Andrzej Ratkowski, Andrzej Zalewski",
+      "weekday": 4,
+      "weeks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     }
   ]
 }

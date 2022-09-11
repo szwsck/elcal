@@ -20,10 +20,10 @@ COURSE_TYPE_NAMES = {
     'laboratory': 'Laboratorium',
 }
 COURSE_TYPE_COLORS = {
-    'lecture': '1',
-    'project': '2',
-    'tutorial': '3',
-    'laboratory': '4',
+    'lecture': '12',
+    'project': '15',
+    'tutorial': '2',
+    'laboratory': '6',
 }
 
 creds = Credentials.from_authorized_user_file('token.json', SCOPES)
