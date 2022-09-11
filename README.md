@@ -6,7 +6,7 @@ A script to create shareable Google Calendars for university classes.
 
 Create a JSON object from the following template:
 
-```json
+```
  {
   "id": "wus-lec", # an unique id that will not change in the future
   "name": "WUS", # course name
